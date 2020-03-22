@@ -1,9 +1,7 @@
 import React from 'react';
 
-function SandBox() {
-    return <div className='SandBox'>
-        <h1>Hello world</h1>
+export default function () {
+    return <div className='sandbox-container' role='sandbox-container'>
+        <h1 className='sandbox--title' role='sandbox--title'>hello world</h1>
     </div>;
 }
-
-export default SandBox;
