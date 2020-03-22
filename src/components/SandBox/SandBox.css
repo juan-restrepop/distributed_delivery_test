@@ -1,0 +1,9 @@
+.SandBox {
+    background-color: #ffbf00;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #0000ff
+}
