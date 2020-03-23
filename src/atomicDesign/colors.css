@@ -1,0 +1,35 @@
+:root {
+    /* Blues */
+    --atomic-color-twilight: #0A3758; /* background color */
+    --atomic-color-azure: #12A5ED; /* primary blue color P2P */
+
+    --atomic-color-blue-peacock: #005D9F;
+    --atomic-color-light-blue: #C6ECFF;
+    --atomic-color-twilight-light: #0A3758;
+
+    /*  Greens */
+    --atomic-color-green: #3FCB7E; /* efficiency */
+
+    --atomic-color-green-light: #C9EDD9;
+    --atomic-color-viridian: #1D874D;
+
+    /*  Yellows */
+    --atomic-color-yellow-burnt: #DDA02A; /* audience */
+
+    --atomic-color-yellow-light: #FCE4A3;
+    --atomic-color-sunflower: #FFBF10;
+
+    /* Reds */
+    --atomic-color-hot-pink: #C42151; /* CDN */
+
+    --atomic-color-rouge: #9A193E;
+    --atomic-color-pink-light: #FFE0E9;
+    --atomic-color-velvet: #570D22;
+
+    /* Grayscale */
+    --atomic-color-white: white;
+    --atomic-color-off-white: #F5F8FA;
+    --atomic-color-light-gray: #E1E8ED;
+    --atomic-color-gray: #A1AEB8;
+    --atomic-color-black: #333;
+}

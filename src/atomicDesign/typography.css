@@ -1,0 +1,17 @@
+:root {
+    /* Fonts */
+    --atomic-fonts-header: alternate-gothic-no-3-d, sans-serif;
+    --atomic-fonts-body: 'Source Sans Pro', sans-serif;
+
+    /* Fontweights */
+    --atomic-font-weight-light: 300;
+    --atomic-font-weight-regular: 400;
+    --atomic-font-weight-semi-bold: 600;
+    --atomic-font-weight-bold: 800;
+
+    /* Font sizes */
+    --atomic-font-size-text-regular: 16px;
+    --atomic-font-size-text-title: 28px;
+    --atomic-font-size-page-h1-title: 42px;
+    --atomic-font-size-page-h2-title: 36px;
+}

@@ -1,1 +1,18 @@
-@import 'components/SandBox/SandBox.css'
+/* Atomic design variables */
+@import "atomicDesign/index.css";
+
+/* Containers */
+@import 'containers/containers.css';
+
+/* Components */
+@import 'components/components.css';
+
+/* Root div container */
+body {
+    margin: 0;
+}
+
+body div#root {
+    min-height: 100vh;
+    background-color: var(--atomic-color-twilight);
+}

@@ -1,0 +1,16 @@
+:root {
+    /* Atoms */
+    --atomic-atom-padding: 2px;
+    --atomic-atom-margin: 4px;
+
+    /* Molecules */
+    --atomic-molecule-padding: 4px;
+    --atomic-molecule-margin: 8px;
+
+    /* Organisms */
+    --atomic-organism-padding: 10px;
+    --atomic-organism-margin: 14px;
+
+    /* Page */
+    --atomic-page-margin: 48px;
+}
