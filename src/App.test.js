@@ -7,8 +7,8 @@ describe('App container', () => {
         expect(App).toBeDefined();
     });
 
-    const { getByRole } = render( <App />);
-    const sandboxContainer = getByRole('sandbox--title');
+    const { getByTestId } = render( <App />);
+    const sandboxContainer = getByTestId('sandbox--title');
 
     it('should render a sandbox container', () => {
         expect(sandboxContainer).not.toBeEmpty();

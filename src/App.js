@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Import components
-import SandBox from './components/SandBox'
+import Home from './containers/Home'
 
 // Main container
 function App() {
   return (
-      <SandBox />
+      <Home />
   );
 }
 
