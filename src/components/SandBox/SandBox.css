@@ -1,9 +1,27 @@
-.SandBox {
-    background-color: #ffbf00;
-    min-height: 100vh;
+.sandbox-container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--atomic-organism-padding);
+    background-color: var(--atomic-color-off-white);
+    max-height: 30vh;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #0000ff
+    color: #0000ff;
+}
+
+.sandbox-container h1.sandbox--title {
+    font-family: var(--atomic-fonts-body);
+    font-size: var(--atomic-font-size-text-title);
+    margin-top: var(--atomic-molecule-margin);
+    margin-bottom: var(--atomic-molecule-margin);
+}
+
+.sandbox-container p.sandbox--author {
+    font-family: var(--atomic-fonts-body);
+    font-size: var(--atomic-font-size-text-regular);
+    margin-top: var(--atomic-molecule-margin);
+    margin-bottom: var(--atomic-molecule-margin);
 }

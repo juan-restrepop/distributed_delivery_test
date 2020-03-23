@@ -3,23 +3,23 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import SandBox from '.'
 
-describe('Sandbox container', () => {
+describe('Sandbox component', () => {
     it('should be defined', () => {
         expect(SandBox).toBeDefined();
     });
 
-    const { getByRole } = render(<SandBox />);
+    const { getByTestId } = render(<SandBox />);
 
-    const sandboxContainer = getByRole('sandbox-container');
-    const sandboxTitle = getByRole('sandbox--title')
+    const sandboxComponent = getByTestId('sandbox-component');
+    const sandboxTitle = getByTestId('sandbox--title')
 
-    expect( sandboxContainer ).toBeInTheDocument();
+    expect( sandboxComponent ).toBeInTheDocument();
 
     it('should have the proper className', () => {
-        expect(sandboxContainer).toHaveClass('sandbox-container');
+        expect(sandboxComponent).toHaveClass('sandbox-component');
     });
     it('should contain a title with the proper class', () => {
-        expect(sandboxContainer).toContainElement(sandboxTitle);
+        expect(sandboxComponent).toContainElement(sandboxTitle);
         expect(sandboxTitle).toHaveClass('sandbox--title')
         expect(sandboxTitle).toHaveTextContent('hello world')
     })
