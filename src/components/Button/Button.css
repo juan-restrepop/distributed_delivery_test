@@ -1,0 +1,25 @@
+button.button-component {
+    padding: var(--atomic-atom-padding);
+    margin: var(--atomic-atom-margin);
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 20px;
+    color: var(--atomic-color-off-white);
+    font-family: var(--atomic-fonts-body);
+    font-size: var(--atomic-font-size-text-regular);
+    font-weight: var(--atomic-font-weight-bold);
+    border: 0;
+}
+button.button-component:hover {
+    cursor: pointer;
+    border: 2px;
+    border-color: var(--atomic-color-off-white);
+}
+
+button.button-component--success {
+    background-color: var(--atomic-color-green);
+}
+
+button.button-component--danger {
+    background-color: var(--atomic-color-rouge);
+}

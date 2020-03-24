@@ -1,11 +1,11 @@
 :root {
     /* Atoms */
-    --atomic-atom-padding: 2px;
-    --atomic-atom-margin: 4px;
+    --atomic-atom-padding: 6px;
+    --atomic-atom-margin: 8px;
 
     /* Molecules */
-    --atomic-molecule-padding: 4px;
-    --atomic-molecule-margin: 8px;
+    --atomic-molecule-padding: 8px;
+    --atomic-molecule-margin: 10px;
 
     /* Organisms */
     --atomic-organism-padding: 10px;
