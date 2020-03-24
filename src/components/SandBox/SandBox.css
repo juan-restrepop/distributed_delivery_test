@@ -1,4 +1,4 @@
-.sandbox-container {
+.sandbox-component {
     display: flex;
     flex-direction: column;
     padding: var(--atomic-organism-padding);
@@ -12,14 +12,14 @@
     color: #0000ff;
 }
 
-.sandbox-container h1.sandbox--title {
+.sandbox-component h1.sandbox--title {
     font-family: var(--atomic-fonts-body);
     font-size: var(--atomic-font-size-text-title);
     margin-top: var(--atomic-molecule-margin);
     margin-bottom: var(--atomic-molecule-margin);
 }
 
-.sandbox-container p.sandbox--author {
+.sandbox-component p.sandbox--author {
     font-family: var(--atomic-fonts-body);
     font-size: var(--atomic-font-size-text-regular);
     margin-top: var(--atomic-molecule-margin);
