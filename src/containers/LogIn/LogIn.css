@@ -1,0 +1,27 @@
+div.login-container {
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: var(--atomic-page-margin);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.login-container .login-form {
+    width: 40vw;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form form input{
+    margin-top: var(--atomic-molecule-margin);
+    margin-bottom: var(--atomic-molecule-margin);
+    padding: var(--atomic-molecule-padding);
+    font-family: var(--atomic-fonts-body);
+    font-size: var(--atomic-font-size-text-regular);
+}
