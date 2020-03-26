@@ -1,0 +1,11 @@
+.card-component {
+    display: flex;
+    flex-direction: column;
+    padding: var(--atomic-organism-padding);
+    margin: var(--atomic-organism-margin);
+    background-color: var(--atomic-color-off-white);
+    min-height: 30vh;
+    min-width: 20vw;
+    align-items: center;
+    justify-content: center;
+}
