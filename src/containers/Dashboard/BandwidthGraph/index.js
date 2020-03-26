@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {requestAudienceData, requestBandwidthData} from '../../../api'
+import {requestBandwidthData} from '../../../api'
 
 import BandwidthGraphPresentational from './BandwidthGraphPresentational';
 

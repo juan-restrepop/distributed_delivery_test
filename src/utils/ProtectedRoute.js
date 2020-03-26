@@ -17,7 +17,6 @@ class ProtectedRouteWithoutRouter extends React.Component {
     componentDidMount() {
         isAuthenticated()
             .then(data => {
-                debugger
                 return this.setState({
                     isLoading: false,
                     isLoaded: true,
@@ -25,7 +24,6 @@ class ProtectedRouteWithoutRouter extends React.Component {
                 })
             })
             .catch(err => {
-                debugger
                 return this.setState({
                     isLoading: false,
                     isLoaded: true,
@@ -36,8 +34,7 @@ class ProtectedRouteWithoutRouter extends React.Component {
 
     render() {
         const {component: Component, ...rest} = this.props;
-        debugger
-
+        
         if (this.state.isLoading) {
             return <div className='loader'>Loading</div>;
         } else if (this.state.isLoaded) {

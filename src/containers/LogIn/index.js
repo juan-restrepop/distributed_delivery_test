@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import LogInPresentational from './LogInPresentational.js';
 
@@ -23,18 +22,13 @@ function LogIn(props) {
 
         return requestLogIn(requestParameters)
             .then(data => {
-                debugger
                 if (!referrer) {
-                    debugger
                     return props.history.push('/')
                 } else {
-                    debugger
                     return props.history.push(location);
                 }
             })
     }
-
-    debugger
 
     return (
         <LogInPresentational onLogIn={_onLogIn} {...props}/>

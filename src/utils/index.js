@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ProtectedRoute from './ProtectedRoute';
 
 /* Handling session token */

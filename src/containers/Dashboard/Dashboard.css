@@ -1,10 +1,10 @@
 div.dashboard-container {
-    max-height: 100vh;
-    max-width: 100vw;
+    /* max-height: 100vh; */
+    /* max-width: 100vw; */
     padding: var(--atomic-page-margin);
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     vertical-align: middle;
 }

@@ -76,7 +76,6 @@ const _isAuthenticatedRequestParameters = {
  * @returns {Promise} Resolves if authenticated, rejects otherwise
  */
 function isAuthenticated() {
-    debugger
     return makeRequest('myInfo', _isAuthenticatedRequestParameters)
         .then(consumeResponseWithJson);
 }

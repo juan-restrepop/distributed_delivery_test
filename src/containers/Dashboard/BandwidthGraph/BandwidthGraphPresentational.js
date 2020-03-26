@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Charts, ChartContainer, ChartRow, YAxis, LineChart, BarChart } from "react-timeseries-charts";
+import { Charts, ChartContainer, ChartRow, YAxis, LineChart } from "react-timeseries-charts";
 import { TimeSeries } from 'pondjs';
 
 

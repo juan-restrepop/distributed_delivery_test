@@ -6,8 +6,12 @@ const BUTTON_ID = 'button-component';
 function _generateButtonClassName(type) {
     if (type === 'success') {
         return `${BUTTON_ID} ${BUTTON_ID}--success`;
-    } else if( type === 'danger') {
+    } else if ( type === 'danger') {
         return `${BUTTON_ID} ${BUTTON_ID}--danger`;
+    } else if ( type === 'danger') {
+            return `${BUTTON_ID} ${BUTTON_ID}--action`;
+    } else {
+            return `${BUTTON_ID} ${BUTTON_ID}--action`;
     }
 }
 
@@ -28,7 +32,7 @@ function Button(props) {
 
 Button.propTypes = {
     title: PropTypes.string,
-    type: PropTypes.oneOf(['success', 'danger']),
+    type: PropTypes.oneOf(['success', 'danger', 'action']),
     onClick: PropTypes.func.isRequired,
 }
 

@@ -29,14 +29,12 @@ const _requestBandwidthDataRequestParameters = {
     isAuthenticated: true,
 };
 function _handleBandwidthDataResponse(audienceData) {
-    debugger
     return {
         cdn: audienceData.data.cdn,
         p2p: audienceData.data.p2p,
     };
 };
 function requestBandwidthData(parameters) {
-    debugger
     return makeRequest('bandwidth/', _requestBandwidthDataRequestParameters, parameters)
         .then(consumeResponseWithJson)
         .then(_handleBandwidthDataResponse);

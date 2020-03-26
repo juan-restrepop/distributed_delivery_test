@@ -23,3 +23,7 @@ button.button-component--success {
 button.button-component--danger {
     background-color: var(--atomic-color-rouge);
 }
+button.button-component--action {
+    background-color: var(--atomic-color-light-blue);
+    color: var(--atomic-color-black);
+}
