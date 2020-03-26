@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import { ProtectedRoute } from './utils';
 // Import components
 import Home from './containers/Home';
 import LogIn from './containers/LogIn';
@@ -17,11 +17,13 @@ const routes = [
         path: '/dashboard',
         component: Dashboard,
         id:'dashboard-route',
+        protected: true,
     },
     {
         path: '/',
         component: Home,
         id:'home-route',
+        protected: true,
     },
 ]
 
@@ -32,7 +34,10 @@ function App() {
             <Router>
                 <Switch>
                     {routes.map(
-                        route => <Route path={route.path} component={route.component} id/>
+                        route => route.protected ?
+                            <ProtectedRoute path={route.path} component={route.component} key={route.id}/>
+                            :
+                            <Route path={route.path} component={route.component} key={route.id}/>
                     )}
                 </Switch>
             </Router>
