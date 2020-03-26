@@ -22,18 +22,14 @@ class LogInPresentational extends React.Component {
         const identifiant = this.state.identifiant;
         const password = this.state.password;
 
-        return this.props.onLogIn(identifiant, password)
-            .then(data => alert(JSON.stringify(data)))
-            .catch(err => alert('Error', JSON.stringify(err)));
+        return this.props.onLogIn(identifiant, password);
     }
 
     handleLazyLogin() {
         const identifier = 'urtoob';
         const password = 'ToobRU';
 
-        return this.props.onLogIn(identifier, password)
-            .then(data => alert(JSON.stringify(data)))
-            .catch(err => alert('Error', JSON.stringify(err)));
+        return this.props.onLogIn(identifier, password);
     }
 
     handleIdentifierInput(event) {

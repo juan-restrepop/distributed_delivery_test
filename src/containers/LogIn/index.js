@@ -23,7 +23,7 @@ function LogIn(props) {
         return requestLogIn(requestParameters)
             .then(data => {
                 if (!referrer) {
-                    return props.history.push('/')
+                    return props.history.push('/dashboard')
                 } else {
                     return props.history.push(location);
                 }
