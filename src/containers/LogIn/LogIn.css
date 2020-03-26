@@ -30,3 +30,7 @@ div.login-container {
     font-family: var(--atomic-fonts-body);
     font-size: var(--atomic-font-size-page-text-regular);
 }
+
+.login-container button {
+    width: 5vw;
+}
