@@ -19,7 +19,7 @@ function _handleLogInResponse(logInData) {
     storeToken(session_token);
     return logInData;
 };
-function logIn(parameters) {
+function requestLogIn(parameters) {
     return makeRequest('auth/', _logInRequestParameters, parameters)
         .then(consumeResponseWithJson)
         .then(_handleLogInResponse);
@@ -37,7 +37,7 @@ function _handleLogOutResponse(logOutData) {
     clearToken();
     return logOutData;
 }
-function logOut(parameters) {
+function requestLogOut() {
     return makeRequest('logout/', _logOutRequestParameters)
         .then(consumeResponseWithText)
         .then(_handleLogOutResponse);
@@ -62,11 +62,28 @@ function getUserInfo(parameters) {
         .then(consumeResponseWithJson);
 }
 
-
+const _isAuthenticatedRequestParameters = {
+    method: 'POST',
+    mimeTypes: {
+        accept: 'application/json',
+        contentType: 'application/json',
+    },
+    isAuthenticated: true,
+}
+/** isAuthenticated()
+ * Is the user authenticated or not
+ * @returns {Promise} Resolves if authenticated, rejects otherwise
+ */
+function isAuthenticated() {
+    debugger
+    return makeRequest('myInfo', _isAuthenticatedRequestParameters)
+        .then(consumeResponseWithJson);
+}
 
 
 export {
-    logIn,
-    logOut,
+    requestLogIn,
+    requestLogOut,
     getUserInfo,
+    isAuthenticated,
 }
