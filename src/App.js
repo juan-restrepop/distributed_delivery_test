@@ -19,6 +19,12 @@ const routes = [
         id:'dashboard-route',
         protected: true,
     },
+    {
+        path: '/',
+        component: Dashboard,
+        id:'dashboard-route',
+        protected: true,
+    },
 ]
 
 // Main container
