@@ -1,6 +1,5 @@
 import {
     consumeResponseWithJson,
-    consumeResponseWithText,
     makeRequest,
 } from './utils.js';
 
@@ -16,17 +15,36 @@ function _handleAudienceDataResponse(audienceData) {
     return audienceData.data.audience;
 };
 function requestAudienceData(parameters) {
-    const daRequestParams = {
-        from: new Date(1969, 7, 20).getTime(),
-        to: Date.now(),
-    }
-    debugger
-    return makeRequest('audience/', _requestAudienceDataRequestParameters, daRequestParams)
+    return makeRequest('audience/', _requestAudienceDataRequestParameters, parameters)
         .then(consumeResponseWithJson)
         .then(_handleAudienceDataResponse);
 }
 
+const _requestBandwidthDataRequestParameters = {
+    method: 'POST',
+    mimeTypes: {
+        accept: 'application/json',
+        contentType: 'application/json',
+    },
+    isAuthenticated: true,
+};
+function _handleBandwidthDataResponse(audienceData) {
+    debugger
+    return {
+        cdn: audienceData.data.cdn,
+        p2p: audienceData.data.p2p,
+    };
+};
+function requestBandwidthData(parameters) {
+    debugger
+    return makeRequest('bandwidth/', _requestBandwidthDataRequestParameters, parameters)
+        .then(consumeResponseWithJson)
+        .then(_handleBandwidthDataResponse);
+}
+
 export {
+    requestBandwidthData,
     requestAudienceData,
+    _handleBandwidthDataResponse,
     _handleAudienceDataResponse,
 }

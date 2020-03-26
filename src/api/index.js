@@ -6,7 +6,8 @@ import {
 } from './auth';
 
 import {
-    requestAudienceData
+    requestAudienceData,
+    requestBandwidthData,
 } from './dashboard_data'
 
 
@@ -16,4 +17,5 @@ export {
     getUserInfo,
     isAuthenticated,
     requestAudienceData,
+    requestBandwidthData,
 }
