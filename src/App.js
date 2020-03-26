@@ -3,7 +3,6 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { ProtectedRoute } from './utils';
 // Import components
-import Home from './containers/Home';
 import LogIn from './containers/LogIn';
 import Dashboard from './containers/Dashboard';
 
@@ -12,17 +11,12 @@ const routes = [
         path: '/login',
         component: LogIn,
         id:'login-route',
+        protected: false,
     },
     {
         path: '/dashboard',
         component: Dashboard,
         id:'dashboard-route',
-        protected: true,
-    },
-    {
-        path: '/',
-        component: Home,
-        id:'home-route',
         protected: true,
     },
 ]
