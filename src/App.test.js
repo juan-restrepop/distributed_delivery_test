@@ -6,13 +6,4 @@ describe('App container', () => {
     it('should be defined', () => {
         expect(App).toBeDefined();
     });
-
-    const { getByTestId } = render( <App />);
-    const sandboxContainer = getByTestId('sandbox--title');
-
-    it('should render a sandbox container', () => {
-        expect(sandboxContainer).not.toBeEmpty();
-    })
-
-
-})
+});
