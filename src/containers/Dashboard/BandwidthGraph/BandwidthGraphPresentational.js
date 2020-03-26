@@ -27,18 +27,24 @@ function BandwidthGraphPresentational(props) {
     const min_p2p = p2pTimeSeries.min('p2p');
     const max_p2p = p2pTimeSeries.max('p2p');
 
+    const style = {
+        cdn: {
+            normal: {stroke: "var(--atomic-color-hot-pink)", fill: "none", strokeWidth: 2},
+        },
+        p2p: {
+          normal: {stroke: "var(--atomic-color-azure)", fill: "none", strokeWidth: 2},
+        }
+    };
+
     return (
         <div className='audience-graph'>
-            <p>CDN => min: {min_cdn.toPrecision(4)}, avg: {avg_cdn.toPrecision(4)}, max: {max_cdn.toPrecision(4)}</p>
-            <p>P2P => min: {min_p2p.toPrecision(4)}, avg: {avg_p2p.toPrecision(4)}, max: {max_p2p.toPrecision(4)}</p>
-            <ChartContainer timeRange={cdnTimeSeries.timerange()} width={800}>
+            <ChartContainer timeRange={cdnTimeSeries.timerange()} width={1200}>
                 <ChartRow height="300">
-                    <YAxis id="axis1" label="CDN" min={min_cdn} max={max_cdn} width="60" type="linear"/>
+                    <YAxis id="axis1" label="CDN - P2P" min={Math.min(min_cdn, min_p2p)} max={Math.max(max_cdn, max_p2p)} width="60" type="linear"/>
                     <Charts>
-                        <LineChart axis="axis1" series={cdnTimeSeries} column={["audience"]}/>
-                        <LineChart axis="axis2" series={p2pTimeSeries} column={["audience"]}/>
+                        <LineChart axis="axis1" series={cdnTimeSeries} columns={["cdn"]} style={style}/>
+                        <LineChart axis="axis1" series={p2pTimeSeries} columns={["p2p"]} style={style}/>
                     </Charts>
-                    <YAxis id="axis2" label="P2P" min={min_p2p} max={max_p2p} width="60" type="linear"/>
                 </ChartRow>
             </ChartContainer>
         </div>
